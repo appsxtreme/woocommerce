@@ -1276,7 +1276,7 @@ class WC_Cart {
 
 							case "percent" :
 
-								$percent_discount = round( ( round( $this->cart_contents_total + $this->fee_total + $this->tax_total, $this->dp ) / 100 ) * $coupon->amount, $this->dp );
+								$percent_discount = round( ( round( $this->cart_contents_total + $this->tax_total, $this->dp ) / 100 ) * $coupon->amount, $this->dp );
 
 								if ( $coupon->amount > $percent_discount )
 									$coupon->amount = $percent_discount;
